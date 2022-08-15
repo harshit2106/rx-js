@@ -53,10 +53,9 @@ const obss = new Observable((observer) => {
     http.removeEventListener("load", onLoad);
     http.removeEventListener("error", onError);
   };
-  
 });
 
 const subbbs = obss.subscribe({
-    next:(data)=>console.log(data),
-    error:(error)=>console.log(error);
-})
+  next: (data) => console.log(data),
+  error: (error) => console.log(error),
+});
